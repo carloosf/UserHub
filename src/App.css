@@ -4,9 +4,45 @@
 }
 
 .App {
+
   /* Configuração de tamanho*/
   width: 100vw;
   height: 100vh;
+
+  /* Configuração de Alinhamento*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  border: 1px white solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main input {
+  margin-block: 2rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+
+.main form{
+  display: grid;
+  grid-template
+}
+
+.main input:focus {
+  outline-color: black;
+
 }
 
 .container {
@@ -16,7 +52,7 @@
   align-items: center;
   justify-content: center;
   border: 1px solid white;
-  background-color: var(--bg-secundary-color-color);
+  background-color: var(--bg-secundary-color);
   padding: 2rem;
 }
 
