@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState({})
   const [search, setSearch] = useState('')
 
   useEffect(() => {
@@ -17,21 +17,34 @@ function App() {
     }
   }, [search])
 
-  const handleChange = (event) => {
-    setSearch(event.target.value);
-  };
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    if (search) {
+      setSearch(event.target.value)
+    }
+  }
+
+  const handleInputChange = (event) => {
+    setSearch(event.target.value)
+  }
 
   return (
 
     <div className="App">
       <div className='main'>
-        <form action="">
-          <input type="text"
+
+        <form action={handleSubmit}>
+
+          <input
+            type="text"
             placeholder='Pesquisar Usuario'
-            onChange={handleChange}
             value={search}
+            onChange={handleInputChange}
           />
-          <button type="submit"></button>
+
+          <button type="submit">
+            Pesquisar
+          </button>
         </form>
 
         {user && (
