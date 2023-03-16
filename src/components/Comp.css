@@ -1,6 +1,6 @@
 :root {
     --bg-color: rgb(37, 32, 32);
-    --bg-secundary-color: rgb(56, 19, 19);
+    --bg-secundary-color: rgb(0, 0, 0);
 }
 
 input,
@@ -12,7 +12,7 @@ input {
     padding: 0.6rem;
     font-size: medium;
     margin-top: 1rem;
-    background-color: var(--bg-secundary-color);
+    background-color: var(--bg-color);
     border-radius: 10px;
     border: none;
     text-align: center;
@@ -33,11 +33,13 @@ button {
     cursor: pointer;
     transition: 0.6s;
     border: none;
-    background-color: var(--bg-secundary-color);
+    color: white;
+    background-color: var(--bg-color);
+    border-radius: 10px;
 }
 
 button:hover{
-    background-color: var(--bg-color);
+    background-color: var(--bg-secundary-color);
     color: rgb(255, 255, 255);
     border: none;
 }
